@@ -1,0 +1,78 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+position: relative;
+background-color: blue;
+height: 200dvh;
+}
+.main_div{
+position: absolute;
+top: 50%;
+left:  50%;
+transform: translate(-40% ,-200%);
+
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: -12%;
+    clip-path: circle();
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: -10%;
+    right:  -12%;
+    z-index: -5;
+    clip-path: circle();
+    height: 150px;
+    width: 150px;
+    background-color: red;
+}
+
+.clock{
+    display: flex;justify-content: space-around;
+    align-items: center;
+    width: 55vh;
+    height: 35vh;
+    color: white;
+    font-weight: 200;
+    font-size: 5rem;
+    background: rgba(255, 255, 255, 0.205);
+border-radius: 16px;
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(40px);
+
+}
+
+ #hrs::after{
+     content: 'hrs';
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+ #min::after{
+     content: 'min';
+    position: absolute;
+    bottom: 25%;
+    left: 45%;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+ #sec::after{
+     content: 'sec';
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
