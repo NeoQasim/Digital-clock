@@ -9,3 +9,4 @@ setInterval(() => {
     min.innerHTML= (curentTime.getMinutes()<10?"0":"" )+ curentTime.getMinutes()
     sec.innerHTML= (curentTime.getSeconds() <10?"0":"" )+ curentTime.getSeconds()
 }, 1000);
+ 
